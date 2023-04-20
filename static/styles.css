@@ -1,0 +1,120 @@
+body{
+    align-items: center;
+    background: url('space.jpg'),no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-content: center;
+    display: flex;
+    min-height: 100vh;
+}
+
+
+.login-section{
+    height: 40vh;
+    width: 70vh;
+    background-color: rgb(209, 223, 187);
+    border-radius: 16px;
+    backdrop-filter:blur(7px);
+    margin: 5px 5px;
+    border: solid 2px rgba(155, 38, 38, 0.2);
+}
+.signup-section{
+    height: 40vh;
+    width: 70vh;
+    background-color: rgb(209,223,187);
+    border-radius: 16px;
+    backdrop-filter: blur(7px);
+    margin: 5px 5px;
+    border: solid 2px rgba(155,38,38,0.2);
+}
+.form-box{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.form-box .input-box{
+    position:relative;
+    width: 30vh;
+    margin: 20px 0;
+    border-bottom: solid 2px #c2a2a2;
+}
+
+.form-box .input-box input{
+    width: 85%;
+    height: 20px;
+    border: none;
+    outline: none;
+    padding:0 35px 0 5px;
+    font-size: 15px;
+    background-color: transparent;
+    color: red;
+    margin-top: 10px;
+    
+}
+.input-box label{
+    position:absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    transition: 0.5;
+    cursor: pointer;
+}
+input:focus ~ label,
+input:valid ~ label{
+    top: -5px;
+}
+.grop-section{
+    margin-top: 10px;
+    
+}
+.grop-section a{
+    text-decoration: none;
+    padding: 5px 5px;
+    border: solid 1px transparent;
+    transition: 0.5s;
+    border-radius: 16px;
+   
+  
+    background-color: transparent;
+}
+.grop-section a:hover{
+    background-color: rgb(167, 167, 180);
+    color: white;
+}
+
+@media(max-width: 600px) {
+    .login-section{
+        width: 50vh;
+        height: 60vh;
+
+    }
+    .signup-section{
+        width: 40vh;
+        height:60vh;
+    }
+    .grop-section a{
+        font-size: small;
+    }
+    .form-box .input-box label{
+        font-size: large;
+        text-decoration: blanchedalmond;
+    }
+  }
+.btn{
+    color: white;
+    background-color: blue;
+    transition: 0.5;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: rgb(255, 94, 94);
+}
+
+
+.homeb{
+    background: url('buildingclip.jpg'),no-repeat;
+    background-position: center;
+    background-size: cover;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Feedback Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+      /* Style the form container */
+      .form-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        width: 80%;
+      }
+      
+      /* Style the form inputs */
+      label {
+        font-weight: bold;
+        margin-top: 16px;
+        margin-bottom: 8px;
+      }
+      input[type="text"],
+      input[type="email"],
+     
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 16px;
+        transition: border-color 0.3s ease-in-out;
+      }
+      input[type="text"]:focus,
+      input[type="email"]:focus,
+      textarea:focus {
+        border-color: #4CAF50;
+      }
+      
+      /* Style the submit and reset buttons */
+      input[type="submit"],
+      input[type="reset"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+      input[type="submit"]:hover,
+      input[type="reset"]:hover {
+        background-color: #45a049;
+      }
+      
+      /* Style the animations */
+      .animated {
+        animation-duration: 1s;
+        animation-fill-mode: both;
+      }
+      .animate__fadeInDown {
+        --animate-duration: 1s;
+        --animate-delay: 0.5s;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="animated animate__fadeInDown">Feedback Form</h1>
+    <div class="form-container animated animate__fadeInDown">
+      <form action="{% url 'create' %}" method="POST">
+        {% csrf_token %}
+        <label for="studentName">Student Name:</label>
+        <input type="text" id="studentName" name="studentName" required>
+
+        <label for="studentID">Student ID:</label>
+        <input type="text" id="studentID" name="studentID" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="college">College:</label>
+        <input type="text" id="college" name="college" required>
+
+        <label for="FB">Feedback:</label>
+        <textarea id="FB" name="FB" rows="4" cols="50" required></textarea>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+      </form>
+    </div>
+  </body>
+</html>
